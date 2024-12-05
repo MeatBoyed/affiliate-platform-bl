@@ -8,12 +8,15 @@ import { Button, buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { ModeToggle } from "@/components/mode-toggle"
 
+import Dashboard from "../components/dashboard"
+
 export default async function Home() {
   const { sessionClaims } = await auth()
 
   return (
-    <main className="flex h-screen items-center justify-center">
-      <SignedOut>
+    <>
+      {/* <main className="flex h-screen items-center justify-center"> */}
+      {/* <SignedOut>
         <Button asChild>
           <SignInButton />
         </Button>
@@ -38,7 +41,11 @@ export default async function Home() {
           </Link>
           <ModeToggle />
         </div>
-      </div>
-    </main>
+      </div> */}
+
+      {/* </main> */}
+
+      <Dashboard />
+    </>
   )
 }

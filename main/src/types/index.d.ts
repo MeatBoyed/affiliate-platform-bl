@@ -1,0 +1,22 @@
+import { Role } from "./types"
+
+declare global {
+  interface CustomJwtSessionClaims {
+    roles: Role[]
+  }
+}
+
+export type SiteConfig = {
+  name: string
+  author: string
+  description: string
+  keywords: Array<string>
+  url: {
+    base: string
+    author: string
+  }
+  links: {
+    github: string
+  }
+  ogImage: string
+}

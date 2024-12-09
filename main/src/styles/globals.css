@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* Original Config */
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -63,6 +64,55 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+  }
+} */
+
+/* PluxNet Config */
+/* RealTimeColours - https://www.realtimecolors.com/?colors=ffffff-242b6a-ad0567-623394-f7b5ab&fonts=Montserrat-Inter */
+@layer base {
+  :root {
+    --background: 234 49% 72%;
+    --foreground: 0 0% 0%;
+    --card: 234 49% 72%;
+    --card-foreground: 0 0% 0%;
+    --popover: 234 49% 72%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 325 94% 65%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 269 49% 61%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 234 49% 20%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 8 83% 18%;
+    --accent-foreground: 234 49% 72%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 0%;
+    --border: 234 49% 20%;
+    --input: 234 49% 20%;
+    --ring: 8 83% 40%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 234 49% 28%;
+    --foreground: 0 0% 100%;
+    --card: 234, 48%, 25%;
+    --card-foreground: 0 0% 100%;
+    --popover: 234 49% 28%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 325 94% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 269 49% 39%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 234 49% 80%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 8 83% 82%;
+    --accent-foreground: 234 49% 28%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 10%;
+    --border: 234 49% 60%;
+    --input: 234 49% 80%;
+    --ring: 8 83% 60%;
   }
 }
 

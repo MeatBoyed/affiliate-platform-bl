@@ -1,5 +1,6 @@
 import { Apple, Info, QrCode, Users, Wifi } from "lucide-react"
 
+import { fibreDeals } from "@/config/pluxnet-products"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
@@ -9,6 +10,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+
+import ProductCard from "./common/product-card"
+import { ProductsDisplayer } from "./common/products-displayer"
 
 // Sample data (in a real application, this would come from an API or database)
 const fibrePackages = [
@@ -42,60 +46,26 @@ const statusColors = {
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+    <div className="min-h-screen  p-8">
       <main className="space-y-8">
-        <section>
-          <h2 className="mb-4 flex items-center text-2xl font-semibold text-gray-800">
+        <section className="w-full">
+          <ProductsDisplayer />
+          {/* <h2 className="mb-4 flex items-center text-2xl font-semibold ">
             <Wifi className="mr-2 h-6 w-6" />
             Fibre Packages
-          </h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {fibrePackages.map((pkg) => (
-              <Card
-                key={pkg.id}
-                className="rounded-xl bg-white shadow-sm transition-shadow hover:shadow-md"
-              >
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg font-medium">
-                    {pkg.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-3xl font-semibold text-gray-800">
-                    {pkg.speed} Mbps
-                  </p>
-                  <p className="mt-1 text-xl font-medium text-gray-600">
-                    ${pkg.price}/mo
-                  </p>
-                  <p className="mt-2 text-sm text-gray-500">
-                    {pkg.sales} sales
-                  </p>
-                </CardContent>
-                <CardFooter className="flex justify-between">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center"
-                  >
-                    <Info className="mr-2 h-4 w-4" />
-                    Details
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center"
-                  >
-                    <QrCode className="mr-2 h-4 w-4" />
-                    QR Code
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+          </h2> */}
+          {/* <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4"> */}
+          {/* {fibrePackages.map((pkg) => (
+              <ProductCard product={pkg} />
+            ))} */}
+          {/* {fibreDeals.map((product) => (
+              <ProductCard product={product} />
+            ))} */}
+          {/* </div> */}
         </section>
 
         <section>
-          <h2 className="mb-4 flex items-center text-2xl font-semibold text-gray-800">
+          <h2 className="mb-4 flex items-center text-2xl font-semibold ">
             <Users className="mr-2 h-6 w-6" />
             Customers
           </h2>

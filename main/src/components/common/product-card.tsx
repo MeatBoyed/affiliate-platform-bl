@@ -1,4 +1,4 @@
-import { Check, Info, QrCode, Zap } from "lucide-react"
+import { Check, QrCode, Zap } from "lucide-react"
 import QRCode from "react-qr-code"
 
 import { FibreDeal } from "@/config/pluxnet-products"
@@ -17,56 +17,10 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog"
-
-interface product {
-  id: number
-  name: string
-  speed: number
-  price: number
-  sales: number
-}
-
-// export default function ProductCard({
-//   product: { id, name, price, speed },
-// }: {
-//   product: FibreDeal
-// }) {
-//   return (
-//     <Card className="rounded-xl bg-popover shadow-sm transition-shadow hover:shadow-md">
-//       <CardHeader className="pb-2">
-//         <CardTitle className="text-lg font-medium">{name}</CardTitle>
-//       </CardHeader>
-//       <CardContent>
-//         <p className="text-3xl font-semibold">{speed} Mbps</p>
-//         <p className="mt-1 text-xl font-medium ">${price}/mo</p>
-//         {/* <p className="mt-2 text-sm">{sales} sales</p> */}
-//       </CardContent>
-//       <CardFooter className="flex gap-2">
-//         <Button
-//           variant="default"
-//           size="sm"
-//           className="flex w-full items-center"
-//         >
-//           <QrCode className="mr-2 h-4 w-4" />
-//           QR Code
-//         </Button>
-//         <Button
-//           variant="secondary"
-//           size="sm"
-//           className="flex w-full items-center"
-//         >
-//           <Info className="mr-2 h-4 w-4" />
-//           Details
-//         </Button>
-//       </CardFooter>
-//     </Card>
-//   )
-// }
 
 export default function ProductCard({ product: pkg }: { product: FibreDeal }) {
   return (
@@ -101,25 +55,9 @@ export default function ProductCard({ product: pkg }: { product: FibreDeal }) {
         </ul>
       </CardContent>
       <CardFooter className="flex gap-2">
-        {/* <Button
-          variant="default"
-          size="sm"
-          className="flex w-full items-center"
-        >
-          <QrCode className="mr-2 h-4 w-4" />
-          Enroll via QR Code
-        </Button> */}
         <ProductQRCode
           url={"https://pluxnet.co.za/switch-today-black-friday/"}
         />
-        {/* <Button
-          variant="secondary"
-          size="sm"
-          className="flex w-full items-center"
-        >
-          <Info className="mr-2 h-4 w-4" />
-          Details
-        </Button> */}
       </CardFooter>
     </Card>
   )
@@ -147,15 +85,7 @@ export function ProductQRCode({ url }: { url: string }) {
           </DialogDescription>
         </DialogHeader>
         <div className="grid p-4">
-          <div
-            // style={{
-            //   height: "auto",
-            //   margin: "0 auto",
-            //   maxWidth: 64,
-            //   width: "100%",
-            // }}
-            className="w-full "
-          >
+          <div className="w-full ">
             <QRCode
               size={256}
               style={{ height: "auto", maxWidth: "100%", width: "100%" }}

@@ -50,18 +50,6 @@ export default function Dashboard() {
       <main className="space-y-8">
         <section className="w-full">
           <ProductsDisplayer />
-          {/* <h2 className="mb-4 flex items-center text-2xl font-semibold ">
-            <Wifi className="mr-2 h-6 w-6" />
-            Fibre Packages
-          </h2> */}
-          {/* <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4"> */}
-          {/* {fibrePackages.map((pkg) => (
-              <ProductCard product={pkg} />
-            ))} */}
-          {/* {fibreDeals.map((product) => (
-              <ProductCard product={product} />
-            ))} */}
-          {/* </div> */}
         </section>
 
         <section>

@@ -27,14 +27,16 @@ export default function ProductCard({ product: pkg }: { product: FibreDeal }) {
     <Card className={cn(pkg.mostPopular && "border-primary")}>
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle className="text-2xl font-bold">{pkg.name}</CardTitle>
+          <CardTitle className="w-full text-2xl font-bold">
+            {pkg.name}
+          </CardTitle>
           {pkg.mostPopular && (
             <Badge variant="secondary" className="font-semibold">
               Most Popular
             </Badge>
           )}
         </div>
-        <p className="text-muted-foreground">{pkg.type}</p>
+        {/* <p className="text-muted-foreground">{pkg.type}</p> */}
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="flex items-baseline justify-center space-x-2">

@@ -52,7 +52,7 @@ export default function Dashboard() {
           <ProductsDisplayer />
         </section>
 
-        <section>
+        {/* <section>
           <h2 className="mb-4 flex items-center text-2xl font-semibold ">
             <Users className="mr-2 h-6 w-6" />
             Customers
@@ -91,7 +91,7 @@ export default function Dashboard() {
               </table>
             </CardContent>
           </Card>
-        </section>
+        </section> */}
       </main>
     </div>
   )

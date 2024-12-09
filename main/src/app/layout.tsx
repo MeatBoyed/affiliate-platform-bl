@@ -49,7 +49,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
               )}
 
               <Navbar />
-              {children}
+              <div className="flex w-full items-center justify-center py-5">
+                <main className="w-full max-w-7xl">{children}</main>
+              </div>
             </ThemeProvider>
           </QueryProvider>
         </body>
